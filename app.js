@@ -24,7 +24,7 @@ require("dotenv").config();
 
 // extra packages
 app.set("trust proxy", 1);
-app.use(rateLimiter((windowMs = 15 * 60 * 1000), (max = 100)));
+app.use(rateLimiter({ windowMs: 15 * 60 * 1000, max: 100 }));
 
 app.use(express.json());
 app.use(xss());
